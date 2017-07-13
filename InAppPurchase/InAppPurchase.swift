@@ -28,10 +28,7 @@ class InAppPurchase: NSObject, SKProductsRequestDelegate, SKPaymentTransactionOb
 			let product = response.products[0] as SKProduct
 			print(product.localizedTitle)
 			print(product.localizedDescription)
-			let format = NumberFormatter()
-			format.numberStyle = .currency
-			format.string(from: product.price)
-			print(format.string(from: product.price)!)
+			print(product.price)
 			restore ? SKPaymentQueue.default().restoreCompletedTransactions() : purchase(product: product)
 		} else {
 			print("Error: Make sure the bundle Identifier matches the app, and check the product identifier")
