@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  InAppPurchase
-//
-//  Created by Digital Bananas on 7/9/17.
-//  Copyright © 2017 BobbyMay. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

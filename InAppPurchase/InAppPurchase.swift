@@ -4,15 +4,20 @@ class InAppPurchase: NSObject, SKProductsRequestDelegate, SKPaymentTransactionOb
 	
 	private lazy var restore = false
 	
-	/// Starts the in-app purchase process
+	/**
+		Starts the in-app purchase process
+		- parameters:
+		  - productID: Product ID from iTunes connect
+		  - restore: Restore previous purchase
+		*/
 	func start(productID: String, restore: Bool = false) {
 		self.restore = restore
 		SKPaymentQueue.default().add(self)
 		request(productID)
 	}
 	
-	/// Fetches product information
-	func request(_ id: String) {
+ /// Fetches product information
+	private func request(_ id: String) {
 		if SKPaymentQueue.canMakePayments() {
 			let productID = NSSet(object: id) as! Set<String>
 			let productsRequest:SKProductsRequest = SKProductsRequest(productIdentifiers: productID)
@@ -38,7 +43,7 @@ class InAppPurchase: NSObject, SKProductsRequestDelegate, SKPaymentTransactionOb
 	}
 	
 	/// Make the purchase
-	func purchase(product: SKProduct) {
+	private func purchase(product: SKProduct) {
 		let payment = SKPayment(product: product)
 		SKPaymentQueue.default().add(payment)
 	}
