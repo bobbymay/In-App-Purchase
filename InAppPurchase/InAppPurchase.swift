@@ -71,3 +71,4 @@ class InAppPurchase: NSObject, SKProductsRequestDelegate, SKPaymentTransactionOb
 	}
 	
 }
+
