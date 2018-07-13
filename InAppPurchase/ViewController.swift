@@ -9,7 +9,7 @@ class ViewController: UIViewController {
 		inAppPurchase.start(productID: "yourproductID")
 		
 		// restore previous purchase:
-		//inAppPurchase.start(productID: "yourproductID", restore: true)
+		// inAppPurchase.start(productID: "yourproductID", restore: true)
 		
 	}
 	
