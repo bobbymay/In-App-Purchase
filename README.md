@@ -4,7 +4,7 @@ A simple implementation of In-App Purchase:
 
 ##### Declare Instance:
 ```swift
-private lazy var inAppPurchase = InAppPurchase()
+lazy var inAppPurchase = InAppPurchase()
 ```
 ##### Place this where purchase is made:
 ```swift
