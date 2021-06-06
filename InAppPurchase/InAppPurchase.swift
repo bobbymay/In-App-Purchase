@@ -1,6 +1,6 @@
 import StoreKit
 
-class InAppPurchase: NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserver {
+final class InAppPurchase: NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserver {
 	
 	private lazy var restore = false
 	
